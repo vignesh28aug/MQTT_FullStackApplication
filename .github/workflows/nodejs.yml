@@ -62,4 +62,4 @@ jobs:
           context: ./frontend/mqtt_test
           file: ./frontend/mqtt_test/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/Frontend/mqtt_test:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/frontend/mqtt_test:latest
