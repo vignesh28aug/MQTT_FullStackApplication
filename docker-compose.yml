@@ -1,0 +1,18 @@
+# docker-compose.yml
+# version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend/mqtt_test
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"  # Exposing nginx (React) on port 3000
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"  # Exposing backend service
+    environment:
+      - MQTT_BROKER_URL=mqtt://test.mosquitto.org  # Example MQTT broker URL
