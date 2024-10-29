@@ -3,7 +3,7 @@
 services:
   frontend:
     build:
-      context: ./frontend/mqtt_test
+      context: ./frontend/
       dockerfile: Dockerfile
     ports:
       - "3000:80"  # Exposing nginx (React) on port 3000
